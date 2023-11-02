@@ -1,0 +1,20 @@
+syntax = "proto3";
+package google.protobuf;
+option csharp_namespace = "MinimalApi.Grpc.Person";
+
+message Person {
+	int64 Id = 1;
+	string Name = 2;
+	int32 Age = 3;
+	string Address = 4;
+}
+
+message PersonListRequest {}
+
+message PersonListResponse {
+	repeated Person Data = 1;
+}
+
+service PersonService {
+	rpc GetPersonList(PersonListRequest) returns(PersonListResponse);
+}
