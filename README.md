@@ -37,7 +37,9 @@ The project structure is composed of two projects:
 ### MinimalApi.Grpc
 This project contains the .proto files definitions.
 
-When this project is build, it will autogenerate the C# code through [Grpc.Tools](https://www.nuget.org/packages/Grpc.Tools/) Nuget package.
+When this project is built, it will autogenerate the C# code through [Grpc.Tools](https://www.nuget.org/packages/Grpc.Tools/) Nuget package.
+
+The generated Grpc code will be used by the Grpc services, in the main project (ie.: [PersonGrpcService](https://github.com/humaranah/MinimalApiWithGrpc/blob/main/source/MinimalApi/Application/PersonGrpcService.cs)).
 
 ### MinimalApi
 This project contains all the interaction logic of the API and Grpc services. It is composed of a very basic DDD folder structure (just for testing).
