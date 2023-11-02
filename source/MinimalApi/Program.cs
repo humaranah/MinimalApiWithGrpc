@@ -6,8 +6,8 @@ using MinimalApi.Infrastructure;
 var builder = WebApplication.CreateBuilder(args);
 builder.WebHost.ConfigureKestrel(options =>
 {
-    options.ListenLocalhost(50000, config => config.Protocols = HttpProtocols.Http1AndHttp2);
-    options.ListenLocalhost(50001, config => config.Protocols = HttpProtocols.Http2);
+    options.ListenLocalhost(48000, config => config.Protocols = HttpProtocols.Http1AndHttp2);
+    options.ListenLocalhost(48001, config => config.Protocols = HttpProtocols.Http2);
 });
 
 // Add services to the container.
