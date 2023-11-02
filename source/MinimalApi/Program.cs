@@ -33,9 +33,9 @@ if (app.Environment.IsDevelopment())
 //app.UseHttpsRedirection();
 
 app.MapGet("/ping", () => "pong").WithName("GetPing");
-app.MapGet("/projects", (ICompanyService svc) => svc.GetAllAsync());
+app.MapGet("/companies", (ICompanyService svc) => svc.GetAllAsync());
 
-app.MapGet("/projects/{id}", async (Guid id, ICompanyService svc) =>
+app.MapGet("/companies/{id}", async (Guid id, ICompanyService svc) =>
     await svc.GetByIdAsync(id) is Company c
         ? Results.Ok(c)
         : Results.NotFound());
