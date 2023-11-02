@@ -40,6 +40,8 @@ app.MapGet("/companies/{id}", async (Guid id, ICompanyService svc) =>
         ? Results.Ok(c)
         : Results.NotFound());
 
+// This will get the same response than GrpcService:
+app.MapGet("/persons", (IPersonRepository repo) => repo.GetAllAsync());
 app.MapGrpcService<PersonGrpcService>();
 
 app.Run();
