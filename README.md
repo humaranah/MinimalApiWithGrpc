@@ -60,7 +60,7 @@ The following code can be found in [Program.cs](source/MinimalApi/Program.cs):
 builder.WebHost.ConfigureKestrel(options =>
 {
     // Asp.Net calls should use 'http://localhost:50000'
-    // and Grpc calls should use 'http://localhost:5001'
+    // and Grpc calls should use 'http://localhost:50001'
     options.ListenLocalhost(50000, config => config.Protocols = HttpProtocols.Http1AndHttp2);
     options.ListenLocalhost(50001, config => config.Protocols = HttpProtocols.Http2);
 });
