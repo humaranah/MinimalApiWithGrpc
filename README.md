@@ -77,7 +77,7 @@ A web request can be done using the following url:
 
 That request will do the following:
 1. Request will be handled by "Get mapper" defined in [Program.cs](source/MinimalApi/Program.cs).
-2. It will call [FakerPersonRepository.cs](source/MinimalApi/Infrastructre/FakerPersonRepository.cs) to get sample data.
+2. It will call [FakerPersonRepository.cs](source/MinimalApi/Infrastructure/FakerPersonRepository.cs) to get sample data.
 3. The response will be forwarded to the client (this is a very small application just for testing).
 
 #### Grpc request
